@@ -13,7 +13,7 @@ The solution consists of an React web application, and scss pre-compliator for c
 
 [![My Skills](https://skillicons.dev/icons?i=vite,sass,react)](https://skillicons.dev)
 
-You can view the demo [here](https://covidstats-peter.netlify.app/).
+
 
 ---
 
