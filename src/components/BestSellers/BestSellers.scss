@@ -1,0 +1,106 @@
+.bestsellers__container {
+  margin-top: 12rem;
+
+  &__wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 0.4rem;
+  }
+
+  &__products {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    grid-row-gap: 4rem;
+    text-align: center;
+
+    &__item {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 5rem;
+      width: 250px;
+      min-height: 250px;
+      margin: 0 auto;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      cursor: pointer;
+
+      &__image {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid purple;
+
+        img {
+        }
+      }
+      &__text {
+        padding: 1.2rem;
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.product__image {
+  width: 100%;
+  height: 300px;
+}
+
+.add-to-cart {
+  align-items: center;
+  appearance: none;
+  background-color: #9966cc;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.add-to-cart:focus {
+  box-shadow: #9966cc 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #9966cc 0 -3px 0 inset;
+}
+
+.add-to-cart:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #9966cc 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.add-to-cart:active {
+  box-shadow: #9966cc 0 3px 7px inset;
+  transform: translateY(2px);
+}

@@ -1,0 +1,25 @@
+.bestsellerscategory__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  &__item {
+    display: flex;
+    gap: 1rem;
+    span {
+      font-size: 1.6rem;
+      border: 1px solid purple;
+      padding: 1rem;
+      transition: 0.3s all;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        background-color: #9966cc;
+        color: black;
+      }
+    }
+  }
+}
+
+.activecategory {
+  background-color: #9966cc;
+}

@@ -1,0 +1,33 @@
+.infonavbar__container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: #fff;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  &__contact {
+    display: flex;
+
+    gap: 3rem;
+    &__address {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+    }
+  }
+  &__login {
+    display: flex;
+    gap: 3rem;
+    &__wishlist {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+    }
+  }
+}
+
+.infonavbar__wrapper {
+  background-color: #9966cc;
+}

@@ -1,0 +1,32 @@
+.discountinfo__container {
+  margin-top: 10rem;
+  background: #f0fdfc;
+  display: flex;
+  justify-content: center;
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    &__image {
+      transform: translateY(-50px);
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+.trends {
+  color: #9966cc;
+  font-size: 2rem;
+}
+
+.discount__info {
+  font-weight: 700;
+  font-size: 1.6rem;
+}

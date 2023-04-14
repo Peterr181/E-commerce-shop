@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.shopnow__button {
+  border: none;
+  background-color: #9966cc;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  align-self: flex-start;
+
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  animation-name: slide-in-bottom;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: 0.3s all;
+  &:hover {
+    background-color: mediumorchid;
+  }
+}
+
+.centerfix {
+  margin: 0 auto;
+}
