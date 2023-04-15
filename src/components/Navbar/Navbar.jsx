@@ -60,18 +60,14 @@ const Navbar = ({ setIsCartClicked, setIsLogoClicked }) => {
                 <a href="#">CONTACT</a>
               </li>
               <li>
-                <Link
-                  to="/cart"
-                  onClick={handleCartClicked}
-                  className="carticon"
-                >
+                <p onClick={handleCartClicked} className="carticon">
                   <ion-icon name="cart"></ion-icon>
                   {cartItemsQuantity > 0 && (
                     <div className="itemsquantity__circle">
                       {cartItemsQuantity}
                     </div>
                   )}
-                </Link>
+                </p>
               </li>
             </ul>
           </div>

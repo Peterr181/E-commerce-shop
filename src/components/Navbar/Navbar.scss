@@ -47,6 +47,12 @@
 .carticon {
   font-size: 3rem;
   position: relative;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.carticon:hover {
+  color: #9966cc;
 }
 
 .itemsquantity__circle {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import InfoNavbar from "./components/Navbar/InfoNavbar";
@@ -7,10 +8,13 @@ import ItemsInfo from "./components/ItemsInfo/ItemsInfo";
 import BestSellers from "./components/BestSellers/BestSellers";
 import DiscountInfo from "./components/DiscountInfo/DiscountInfo";
 import Cart from "./components/Cart/Cart";
+import CartResume from "./components/Cart/CartResume";
 
 function App() {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isLogoClicked, setIsLogoClicked] = useState(false);
+
+  const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <>
@@ -19,11 +23,24 @@ function App() {
         setIsCartClicked={setIsCartClicked}
         setIsLogoClicked={setIsLogoClicked}
       />
-      <Hero />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <BestSellers />
+              <DiscountInfo />
+              <Cart
+                setIsCartClicked={setIsCartClicked}
+                isCartClicked={isCartClicked}
+              />
+            </>
+          }
+        />
 
-      <BestSellers />
-      <DiscountInfo />
-      <Cart isCartClicked={isCartClicked} setIsCartClicked={setIsCartClicked} />
+        <Route path="/cartresume" element={<CartResume />} />
+      </Routes>
     </>
   );
 }

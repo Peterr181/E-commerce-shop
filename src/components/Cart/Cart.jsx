@@ -3,9 +3,7 @@ import { useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
 import "./Cart.scss";
-import test1 from "../../utils/iteminfo1.jpg";
 import CartItem from "./CartItem";
 
 const Cart = ({ isCartClicked, setIsCartClicked }) => {
@@ -66,9 +64,14 @@ const Cart = ({ isCartClicked, setIsCartClicked }) => {
           ))
         )}
         {cartItems.length > 0 && (
-          <button className="shopnow__button" onClick={removeAllItemsHandler}>
-            CLEAR
-          </button>
+          <div className="cart__buttons">
+            <button className="shopnow__button" onClick={removeAllItemsHandler}>
+              CLEAR
+            </button>
+            <Link className="cartresume" to="/cartresume">
+              <button className="shopnow__button">GO TO CART RESUME</button>
+            </Link>
+          </div>
         )}
       </div>
     </>
