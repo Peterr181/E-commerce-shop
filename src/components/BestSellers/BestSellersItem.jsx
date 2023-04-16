@@ -16,6 +16,7 @@ const BestSellersItem = (props) => {
       })
     );
   };
+
   return (
     <div className="bestsellers__item__wrapper">
       <div
@@ -26,7 +27,7 @@ const BestSellersItem = (props) => {
           <img src={image} alt="product image" className="product__image" />
         </div>
         <div className="bestsellers__container__products__item__text">
-          <h3>{title}</h3>
+          <h3>{title.substring(0, 20)}</h3>
           <span>${price}</span>
         </div>
       </div>

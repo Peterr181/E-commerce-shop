@@ -37,6 +37,7 @@
       &__image {
         padding-bottom: 1rem;
         border-bottom: 1px solid purple;
+        padding: 2rem;
 
         img {
         }
@@ -104,4 +105,25 @@
 .add-to-cart:active {
   box-shadow: #9966cc 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.bestsellers__item__wrapper {
+}
+
+@media screen and (max-width: 1111px) {
+  .bestsellers__container__products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 807px) {
+  .bestsellers__container__products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bestsellers__container__products {
+    grid-template-columns: 1fr;
+  }
 }

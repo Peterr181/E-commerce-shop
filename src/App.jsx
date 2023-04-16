@@ -9,7 +9,7 @@ import BestSellers from "./components/BestSellers/BestSellers";
 import DiscountInfo from "./components/DiscountInfo/DiscountInfo";
 import Cart from "./components/Cart/Cart";
 import CartResume from "./components/Cart/CartResume";
-
+import Footer from "./components/Footer/Footer";
 function App() {
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [isLogoClicked, setIsLogoClicked] = useState(false);
@@ -30,7 +30,8 @@ function App() {
             <>
               <Hero />
               <BestSellers />
-              <DiscountInfo />
+
+              <Footer />
               <Cart
                 setIsCartClicked={setIsCartClicked}
                 isCartClicked={isCartClicked}

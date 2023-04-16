@@ -9,11 +9,11 @@
     display: flex;
     padding: 2rem;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     justify-content: space-around;
     width: 100%;
     font-size: 1.6rem;
-    gap: 2rem;
+    gap: 1.2rem;
     height: 160px;
 
     &__text {
@@ -34,6 +34,8 @@
 .cart__image {
   width: 100px;
   height: 100px;
+  border: 1px solid grey;
+  padding: 1rem;
 }
 
 .removecart__button {
@@ -103,7 +105,7 @@
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid #eee;
-  gap: 3rem;
+  gap: 1.5rem;
   font-size: 1rem;
 }
 
@@ -127,6 +129,9 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
+
+  border-top: 1px solid grey;
+  padding-top: 2rem;
 }
 
 .cartresume {

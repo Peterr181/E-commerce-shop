@@ -31,3 +31,13 @@
 .infonavbar__wrapper {
   background-color: #9966cc;
 }
+
+@media screen and (max-width: 660px) {
+  .infonavbar__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+}

@@ -7,6 +7,7 @@ const Navbar = ({ setIsCartClicked, setIsLogoClicked }) => {
   const cartItemsQuantity = useSelector((state) => state.cart.totalQuantity);
   const [isSticky, setIsSticky] = useState(false);
   const heroSectionRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleCartClicked = () => {
     setIsCartClicked(true);
@@ -16,6 +17,10 @@ const Navbar = ({ setIsCartClicked, setIsLogoClicked }) => {
   const handleLogoClicked = () => {
     setIsCartClicked(false);
     setIsLogoClicked(true);
+  };
+
+  const handleMobileMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
@@ -71,8 +76,50 @@ const Navbar = ({ setIsCartClicked, setIsLogoClicked }) => {
               </li>
             </ul>
           </div>
+          <div className="mobile__menu">
+            <p onClick={handleMobileMenuClick}>
+              <ion-icon name="menu"></ion-icon>
+            </p>
+          </div>
         </nav>
       </div>
+
+      {isMenuOpen && (
+        <div className="menu__overlay">
+          <div className="mobileclose__btn">
+            <p onClick={handleMobileMenuClick}>
+              <ion-icon name="close"></ion-icon>
+            </p>
+          </div>
+          <div className="mobilecart__container">
+            <p onClick={handleCartClicked} className="carticon">
+              <ion-icon name="cart"></ion-icon>
+              {cartItemsQuantity > 0 && (
+                <div className="itemsquantity__circle">{cartItemsQuantity}</div>
+              )}
+            </p>
+          </div>
+          <div className="menu__wrapper">
+            <ul>
+              <li>
+                <a href="#">HOME</a>
+              </li>
+              <li>
+                <a href="#">ABOUT</a>
+              </li>
+              <li>
+                <a href="#">SHOP</a>
+              </li>
+              <li>
+                <a href="#">BLOG</a>
+              </li>
+              <li>
+                <a href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </>
   );
 };
